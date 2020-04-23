@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Google Maps API Example...</title>
+<script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+<script type="text/javascript">
+function load() {
+  /* Add the map */
+  var mapDiv = document.getElementById('map-canvas');
+  var map = new google.maps.Map(mapDiv, {
+    center: new google.maps.LatLng(37.42120422110648,-122.0841031558578),
+    zoom: 14,
+    mapTypeId: google.maps.MapTypeId.ROADMAP   });
+  /* Add the marker */
+  var latLng = new google.maps.LatLng(37.42120422110648,-122.0841031558578);
+  var marker = new google.maps.Marker({
+      position: latLng,
+      map: map   });
+}
+</script>
+</head>
+<body onload="load()" onunload="GUnload()">
+	<h1>Googleplex: Google HeadQuarter</h1>
+	<div id="map-canvas" style="width: 450px; height:350px"</div>
+</body>
+</html>
