@@ -1,0 +1,76 @@
+
+<svg width="100%" height="100%" version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <!--Inserting background image-->
+ <image width="1000px" height="500px" xlink:href="Img_map.jpg" ></image>
+	
+ <!--Defining canvas-->
+  <rect x="0" y="0" width="1000" height="500" 
+  style="stroke:blue;stroke-width:3;fill-opacity:0;stroke-opacity:1"/>
+  
+ <!--Draw the Google HQ area and create hyperlink-->
+   <a xlink:href="google_hq.jpg">
+     <rect x="400" y="175" width="150" height="75" 
+     style="fill:red;stroke-width:3;stroke:rgb(0,0,0)"/>
+  </a>
+  
+  <a xlink:href="charleston_park.jpg">
+    <circle cx="680" cy="220" r="70" stroke="black" stroke-width="3" fill="lime"/>
+  </a>
+  
+  <a xlink:href="Parking.jpg">
+    <polygon points="350,35 320,90 750,105 770,35"
+    stroke="black" stroke-width="3" fill="yellow"></polygon>
+  </a>
+
+ <!--Drawing fence-->
+ <rect x="80" y="20" width="800" height="400"
+ style="fill:green;fill-opacity:0.4;stroke:rgb(50,50,50); 
+ stroke-width:4;"/>
+
+ 
+ <!--drawing path-->
+  <polyline points="550,220 615,220" 
+  style="fill-opacity:0;stroke:rgb(35,35,233);stroke-width:4"/>
+  
+  <polyline points="490,177 490,125 575,125 575,100"
+  style="fill-opacity:0;stroke:rgb(35,35,233);stroke-width:4"/>
+  
+   <!--create moving object-->
+  <g transform="translate(-25,-25)">
+    <image width="50px" height="50px" xlink:href="man.png">
+      <animateMotion path="M 580 100 L 580 125 L 500 125 L 500 150"
+      dur="5s" repeatCount="indefinite"/>
+    </image>
+  </g>
+  
+ <!--draw legend-->
+  <rect x="700" y="350" width="300" height="150"
+  style="fill:white;stroke:blue;stroke-width:3;
+  fill-opacity:0.8;stroke-opacity:0.5"/>
+  <rect x="715" y="370" width="25" height="25"
+  style="fill:red;stroke:blue;stroke-width:1"/>
+  <rect x="715" y="420" width="25" height="25"
+  style="fill:lime;stroke:blue;stroke-width:1"/>
+  <rect x="715" y="460" width="25" height="25"
+  style="fill:yellow;stroke:blue;stroke-width:1"/>
+  
+  <text id="TextElement" x="700" y="345"
+  style="font-family:Verdana;font-size:16;">
+  LEGEND
+  </text>
+  <text id="TextElement" x="750" y="390"
+  style="font-family:Verdana;font-size:14">
+  GooglePlex
+  </text>
+  <text id="TextElement" x="750" y="440"
+  style="font-family:Verdana;font-size:14">
+  Charleston Park
+  </text>
+  <text id="TextElement" x="750" y="480"
+  style="font-family:Verdana;font-size:14">
+  Employee Parking space
+  </text>
+ </svg>
