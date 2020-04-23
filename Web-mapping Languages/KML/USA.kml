@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>USA</name>
+	 <open>1</open>
+	<Folder>
+    <name>USA</name>
+    <open>1</open>
+  <LookAt>
+			<longitude>-122.0841031558578</longitude>
+			<latitude>37.42120422110648</latitude>
+			<altitude>3.191371892527735</altitude>
+			<heading>323.556712678822</heading>
+			<tilt>88.26826176349211</tilt>
+			<range>186.585156348392</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+	<Placemark>
+		<name>Googleplex</name>
+		<description><![CDATA[<h2>Headquarter, California</h2>
+		<img src="google_hq.jpg" width="220" height="180"><br>
+		<a href="https://en.wikipedia.org/wiki/Googleplex">Google HQ Information</a>]]></description>
+		<Point>
+			<extrude>1</extrude>
+			<coordinates>-122.0841031558578,37.42120422110648</coordinates>
+		</Point>
+	</Placemark>
+	
+	<Placemark>
+		<name>Los Angeles</name>
+		<description><![CDATA[<h2>LA, California</h2>
+		<img src="california.jpg" width="220" height="180"><br>
+		<a href="https://www.lacity.org/">LA Website</a>]]></description>
+		<Point>
+			<extrude>1</extrude>
+			<coordinates>-118.2426793880066,34.05490178431819</coordinates>
+		</Point>
+	</Placemark>
+	
+	<Placemark>
+		<name>Las Vegas</name>
+		<description><![CDATA[<h2>Vegas</h2>
+		<img src="las_vegas.jpg" width="220" height="180"><br>
+		<a href="https://www.lasvegasnevada.gov/">Las Vegas website</a>]]></description>
+		<Point>
+			<extrude>1</extrude>
+			<coordinates>-115.134009249323,36.18209644725246</coordinates>
+		</Point>
+	</Placemark>
+
+	<Style id="horse_img">
+		<IconStyle>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/ms/icons/horsebackriding.png</href>
+			</Icon>
+			<hotSpot x="0" y=".5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+
+    <Placemark>
+       <name>Path</name>
+	   <LineString>
+	     <extrude>1</extrude>
+		 <altitudeMode>relativeToGround</altitudeMode>
+		 <coordinates>
+			-122.0841031558578,37.42120422110648,0
+			-118.2426793880066,34.05490178431819,0 
+			-115.134009249323,36.18209644725246,0 
+		</coordinates>
+	   </LineString>
+	</Placemark>
+
+	<Placemark>
+	  <TimeSpan>
+	    <begin>2020-03-2T17:10:00Z</begin>
+		<end>2020-03-2T17:10:20Z</end>
+	  </TimeSpan>
+	  <StyleUrl>#horse_img</StyleUrl>
+	  <name>Googleplex</name>
+	  <altitudeMode>absolute</altitudeMode>
+		<Point><coordinates>-122.0841031558578,37.42120422110648,10</coordinates></Point>
+	</Placemark>
+
+	<Placemark>
+	  <TimeSpan>
+	      <when>2019-02-04T17:10:30Z</when>
+	  </TimeSpan>
+	  <StyleUrl>#horse_img</StyleUrl>
+	  <name>Los Angeles</name>
+	  <altitudeMode>absolute</altitudeMode>
+		<Point><coordinates>-118.2426793880066,34.05490178431819,10</coordinates></Point>
+	</Placemark>
+	
+	<Placemark>
+	  <TimeSpan>
+			<when>2019-02-04T17:11:00Z</when>
+	  </TimeSpan>
+	  <StyleUrl>#horse_img</StyleUrl>
+	  <name>Las Vegas</name>
+	  <altitudeMode>absolute</altitudeMode>
+		<Point><coordinates>-115.134009249323,36.18209644725246,10</coordinates></Point>
+	</Placemark>
+	 </Folder>
+</Document>
+</kml>
