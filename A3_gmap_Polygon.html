@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Polygon</title>
+    <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      // This code creates a polygon representing the triangle between Googleplex, Los Angeles and Las Vegas.
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 5,
+          center: {lat: 36.312279,lng: -118.223967},
+          mapTypeId: 'terrain'
+        });
+
+        // Defining the LatLng coordinates for the polygon's path.
+        var triangleCoords = [
+           {lat: 37.42120422110648, lng: -122.0841031558578},
+           {lat: 34.05490178431819, lng: -118.2426793880066},
+           {lat: 36.18209644725246, lng: -115.134009249323},
+		   {lat: 37.42120422110648, lng: -122.0841031558578},
+        ];
+
+        // Constructing the polygon.
+        var myTriangle = new google.maps.Polygon({
+          paths: triangleCoords,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        myTriangle.setMap(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBluQPDtVxT6PYPZjIUOr2Wl7rMtXZoG7Q&callback=initMap">
+    </script>
+  </body>
+</html>
